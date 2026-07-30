@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: beginner-html-site-styled
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: beginner-html-site-styled
+
+  template:
+
+    metadata:
+      labels:
+        app: beginner-html-site-styled
+
+    spec:
+
+      containers:
+
+      - name: website
+
+        image: medhinipicturea/website:latest
+
+        ports:
+
+        - containerPort: 80
