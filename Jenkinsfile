@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'kub-agent'
+    }
 
     environment {
         IMAGE_NAME = "medhinipicturea/beginner-html-site-styled"
